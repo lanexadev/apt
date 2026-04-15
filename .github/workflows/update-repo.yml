@@ -1,0 +1,107 @@
+name: Update APT Repository
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Release version (e.g. 0.1.1)"
+        required: true
+      source_repo:
+        description: "Source repository (e.g. lanexadev/muxtop)"
+        required: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  update:
+    name: Update APT repo
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install tools
+        run: sudo apt-get update && sudo apt-get install -y dpkg-dev
+
+      - name: Import GPG key
+        run: |
+          echo "${{ secrets.APT_GPG_PRIVATE_KEY }}" | gpg --batch --import
+
+      - name: Download .deb packages
+        run: |
+          VERSION="${{ github.event.inputs.version }}"
+          REPO="${{ github.event.inputs.source_repo }}"
+          TAG="v${VERSION}"
+          BASE_URL="https://github.com/${REPO}/releases/download/${TAG}"
+          for target in x86_64-unknown-linux-musl aarch64-unknown-linux-musl; do
+            DEB="muxtop-${target}.deb"
+            echo "Downloading ${DEB}..."
+            curl -sL "${BASE_URL}/${DEB}" -o "pool/${DEB}"
+          done
+
+      - name: Generate APT metadata
+        run: |
+          # Generate Packages files for each architecture
+          mkdir -p dists/stable/main/binary-amd64
+          mkdir -p dists/stable/main/binary-arm64
+
+          # amd64
+          dpkg-scanpackages --arch amd64 pool/ > dists/stable/main/binary-amd64/Packages
+          gzip -k -f dists/stable/main/binary-amd64/Packages
+
+          # arm64
+          dpkg-scanpackages --arch arm64 pool/ > dists/stable/main/binary-arm64/Packages
+          gzip -k -f dists/stable/main/binary-arm64/Packages
+
+      - name: Generate Release file
+        run: |
+          cd dists/stable
+          cat > Release <<EOF
+          Origin: Lanexa
+          Label: Lanexa
+          Suite: stable
+          Codename: stable
+          Architectures: amd64 arm64
+          Components: main
+          Description: Lanexa APT repository
+          EOF
+          sed -i 's/^          //' Release
+
+          # Add checksums
+          apt-ftparchive release . >> Release
+
+          # Sign
+          gpg --batch --yes --armor --detach-sign -o Release.gpg Release
+          gpg --batch --yes --clearsign -o InRelease Release
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "update: muxtop ${{ github.event.inputs.version }}"
+          git push
+
+  deploy-pages:
+    name: Deploy to GitHub Pages
+    needs: update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
