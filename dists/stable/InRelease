@@ -1,0 +1,42 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Origin: Lanexa
+Label: Lanexa
+Suite: stable
+Codename: stable
+Architectures: amd64 arm64
+Components: main
+Description: Lanexa APT repository
+Date: Thu, 16 Apr 2026 22:26:06 +0000
+MD5Sum:
+ 294083b263e6c555c9a02356c2309004              177 Release
+ d41d8cd98f00b204e9800998ecf8427e                0 main/binary-amd64/Packages
+ 67ed1ff9a64b5cd4e04ab44e10c0d820               29 main/binary-amd64/Packages.gz
+ d41d8cd98f00b204e9800998ecf8427e                0 main/binary-arm64/Packages
+ 67ed1ff9a64b5cd4e04ab44e10c0d820               29 main/binary-arm64/Packages.gz
+SHA1:
+ 48c8820460f47f9eab57909f9d32504021305893              177 Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709                0 main/binary-amd64/Packages
+ d1e132a8a63e5fd0586613167a27131a5ff28ceb               29 main/binary-amd64/Packages.gz
+ da39a3ee5e6b4b0d3255bfef95601890afd80709                0 main/binary-arm64/Packages
+ d1e132a8a63e5fd0586613167a27131a5ff28ceb               29 main/binary-arm64/Packages.gz
+SHA256:
+ 51525fbf937b8578a4b20136519b1ec5b86a2043ece8ac44435bdbc87ccd3ff1              177 Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 main/binary-amd64/Packages
+ 45d870e16790e56ec86b8b24733420faca81a98885cca3db497d4237e4e26b68               29 main/binary-amd64/Packages.gz
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 main/binary-arm64/Packages
+ 45d870e16790e56ec86b8b24733420faca81a98885cca3db497d4237e4e26b68               29 main/binary-arm64/Packages.gz
+SHA512:
+ b4e61bee74c48acc1a480f8fd0f7a402e1b6c68cac8f5866359ce8f5074b20a25cc4c918a2c5f08211ad717fe092e82e6a5f6621c411c2e74e597a7d31caa464              177 Release
+ cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e                0 main/binary-amd64/Packages
+ 02df6c5716fc6ed47c038669e4883faa03d84bf7bca65a77844593ba724d7dfee5582ef11ea1141f7bc491487ec87cce8754463cbf6dc54cbb9d8690a0612f01               29 main/binary-amd64/Packages.gz
+ cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e                0 main/binary-arm64/Packages
+ 02df6c5716fc6ed47c038669e4883faa03d84bf7bca65a77844593ba724d7dfee5582ef11ea1141f7bc491487ec87cce8754463cbf6dc54cbb9d8690a0612f01               29 main/binary-arm64/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQQ0b5HRIcwHo0fhdGGGRW2RGYRupAUCaeFh/gAKCRCGRW2RGYRu
+pFqNAP9hhsim0B1sPGUarNn2s2GvAwE1bn51S5jtpUNgb6nc1gEA8L20qPIOyVg6
+e4vqlFxdj590L634twVFTSp2b7O6RgM=
+=MBWQ
+-----END PGP SIGNATURE-----
