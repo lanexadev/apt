@@ -3,7 +3,7 @@ Version: 0.2.1-1
 Architecture: arm64
 Maintainer: Lucas Schimmel
 Installed-Size: 7004
-Filename: pool/muxtop_0.2.1_arm64.deb
+Filename: pool/arm64/muxtop_0.2.1_arm64.deb
 Size: 2057128
 MD5sum: d1f61ed0c244f8fff5c86b1c026f407b
 SHA1: c4d2ed223f1dd9893ffe777a5998b1fb0059cdb1
