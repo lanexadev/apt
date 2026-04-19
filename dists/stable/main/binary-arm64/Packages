@@ -1,0 +1,18 @@
+Package: muxtop
+Version: 0.2.1-1
+Architecture: arm64
+Maintainer: Lucas Schimmel
+Installed-Size: 7004
+Filename: pool/muxtop_0.2.1_arm64.deb
+Size: 2057128
+MD5sum: d1f61ed0c244f8fff5c86b1c026f407b
+SHA1: c4d2ed223f1dd9893ffe777a5998b1fb0059cdb1
+SHA256: 2d84d02af118cab51a93d8f68745a0c7c9ecfb13e2d4ecf0df0561c7b65d5218
+Section: utils
+Priority: optional
+Homepage: https://github.com/lanexadev/muxtop
+Description: A modern, multiplexed system monitor for the terminal
+ A modern, multiplexed system monitor for the terminal. Features real-time CPU,
+ memory, disk, and network monitoring with a TUI interface, process tree view,
+ and fuzzy search.
+
