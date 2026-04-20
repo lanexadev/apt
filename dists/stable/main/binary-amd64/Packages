@@ -1,13 +1,13 @@
 Package: muxtop
-Version: 0.2.1-1
+Version: 0.2.2-1
 Architecture: amd64
 Maintainer: Lucas Schimmel
-Installed-Size: 8019
-Filename: pool/amd64/muxtop_0.2.1_amd64.deb
-Size: 2278728
-MD5sum: d49f4ab26e76714a8e58b5cfad82ed72
-SHA1: 2638c78cfa6b41eb264ee6b012df2255181e0701
-SHA256: 57933246e0eff7463894ea87e5912e96f5634f5babb3f4b4e800b90e5ada25dc
+Installed-Size: 8035
+Filename: pool/amd64/muxtop_0.2.2_amd64.deb
+Size: 2280388
+MD5sum: df07730ed381c61046134d2ccbbbedab
+SHA1: c42b89dce33ea9ad0eb6a0c10ea4547917214cf3
+SHA256: 2939cc4d86eb2f2b6e661713fd4f31d4d27fd7333c43d516cb2a825be7473519
 Section: utils
 Priority: optional
 Homepage: https://github.com/lanexadev/muxtop
