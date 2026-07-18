@@ -7,7 +7,7 @@ on:
         description: "Release version (e.g. 0.1.1)"
         required: true
       source_repo:
-        description: "Source repository (e.g. lanexadev/muxtop)"
+        description: "Source repository (e.g. lucasschimmel/muxtop)"
         required: true
 
 permissions:
