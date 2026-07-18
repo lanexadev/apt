@@ -6,10 +6,10 @@ APT package repository for Lanexa tools, hosted via GitHub Pages.
 
 ```bash
 # Add the GPG key
-curl -fsSL https://lanexadev.github.io/apt/gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/lanexadev.gpg
+curl -fsSL https://lucasschimmel.github.io/apt/gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/lucasschimmel.gpg
 
 # Add the repository
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/lanexadev.gpg] https://lanexadev.github.io/apt stable main" | sudo tee /etc/apt/sources.list.d/lanexadev.list
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/lucasschimmel.gpg] https://lucasschimmel.github.io/apt stable main" | sudo tee /etc/apt/sources.list.d/lucasschimmel.list
 
 # Install
 sudo apt update

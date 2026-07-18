@@ -10,7 +10,7 @@ SHA1: ebec922ac1c47d4b3355ba91a727c4e4f961bd94
 SHA256: eb432fa9c31483eb71c9b15841cd74bb4b82028a4a8a20eec6f4b5761029d80d
 Section: utils
 Priority: optional
-Homepage: https://github.com/lanexadev/muxtop
+Homepage: https://github.com/lucasschimmel/muxtop
 Description: A modern, multiplexed system monitor for the terminal
  A modern, multiplexed system monitor for the terminal. Features real-time CPU,
  memory, disk, and network monitoring with a TUI interface, process tree view,
