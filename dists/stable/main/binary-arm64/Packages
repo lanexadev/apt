@@ -1,13 +1,13 @@
 Package: muxtop
-Version: 0.6.0-1
+Version: 0.7.0-1
 Architecture: arm64
 Maintainer: Lucas Schimmel
-Installed-Size: 8564
-Filename: pool/arm64/muxtop_0.6.0_arm64.deb
-Size: 2767048
-MD5sum: 0fe3e4f90565bee437b0ac9353d8eb2b
-SHA1: f7cfe7a57d8f491f9e0a9746c869879db52e5bb7
-SHA256: 7a184acce2808b2527fa4fd4815886a8dd11b3e979d5cdd645e36db07b774b63
+Installed-Size: 8580
+Filename: pool/arm64/muxtop_0.7.0_arm64.deb
+Size: 2777292
+MD5sum: 3902514cbf7480a7837d1e87f40f005f
+SHA1: 08268f0dea93bf0f7b03d21f096bc3d193247e8b
+SHA256: a35517b5db64cab7fe83be0c5b0c19067064c727faa99165d1a9f3d6ff19908a
 Section: utils
 Priority: optional
 Homepage: https://github.com/lucasschimmel/muxtop
